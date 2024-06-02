@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PharmacyManagementSystem">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PharmacyManagementSystem/dist/PharmacyManagementSystem.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
