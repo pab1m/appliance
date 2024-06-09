@@ -171,12 +171,6 @@ public class dashboardContoller implements Initializable {
     private Label purchase_total;
 
     @FXML
-    private TextField purchase_amount;
-
-    @FXML
-    private Label purchase_balance;
-
-    @FXML
     private Button purchase_payBtn;
 
     @FXML
@@ -536,7 +530,8 @@ public class dashboardContoller implements Initializable {
         addMedicines_col_medicineID.setCellValueFactory(new PropertyValueFactory<>("medicineId"));
         addMedicines_col_brand.setCellValueFactory(new PropertyValueFactory<>("brand"));
         addMedicines_col_productName.setCellValueFactory(new PropertyValueFactory<>("productName"));
-        addMedicines_col_price.setCellValueFactory(new PropertyValueFactory<>("power"));
+//        addMedicines_col_price.setCellValueFactory(new PropertyValueFactory<>("power"));
+        addMedicines_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         addMedicines_col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
         addMedicines_col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
         
@@ -676,30 +671,7 @@ public class dashboardContoller implements Initializable {
         }catch(Exception e){e.printStackTrace();}
         
     }
-    
-    private double balance;
-    private double amount;
-    public void purchaseAmount(){
-        
-        if(purchase_amount.getText().isEmpty() || totalPriceD == 0){
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setTitle("Error Message");
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid :3");
-            alert.showAndWait();
-        }else{
-            amount = Double.parseDouble(purchase_amount.getText());
-            if(totalPriceD > amount){
-                purchase_amount.setText("");
-            }else{
-                balance = (amount - totalPriceD);
-                
-                purchase_balance.setText(String.valueOf(balance));
-            }
-        }
-        
-    }
-    
+
     public void purchasePay(){
         purchaseCustomerId();
         String sql = "INSERT INTO customer_info (customer_id, total, date) "
@@ -737,9 +709,7 @@ public class dashboardContoller implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("Successful!");
                     alert.showAndWait();
-                    
-                    purchase_amount.setText("");
-                    purchase_balance.setText("0.0");
+
                 }
             }
             
@@ -797,8 +767,8 @@ public class dashboardContoller implements Initializable {
         purchase_col_brand.setCellValueFactory(new PropertyValueFactory<>("brand"));
         purchase_col_productName.setCellValueFactory(new PropertyValueFactory<>("productName"));
         purchase_col_qty.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        purchase_col_price.setCellValueFactory(new PropertyValueFactory<>("power"));
-//        purchase_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+//        purchase_col_price.setCellValueFactory(new PropertyValueFactory<>("power"));
+        purchase_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         purchase_tableView.setItems(purchaseList);
         

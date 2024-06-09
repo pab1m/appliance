@@ -262,8 +262,8 @@
                                                 <Font name="Tahoma" size="15.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="purchase_type" layoutX="120.0" layoutY="27.0" onAction="#purchaseType" prefWidth="150.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                          <Label layoutX="26.0" layoutY="70.0" text="Medicine ID:">
+                                          <ComboBox fx:id="purchase_type" layoutX="120.0" layoutY="27.0" prefWidth="150.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <Label layoutX="26.0" layoutY="70.0" text="Appliance ID:">
                                              <font>
                                                 <Font name="Tahoma" size="15.0" />
                                              </font>
@@ -298,7 +298,7 @@
                                                 <Font name="Arial" size="16.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="purchase_amount" layoutX="134.0" layoutY="323.0" onAction="#purchaseAmount" prefHeight="25.0" prefWidth="137.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <TextField fx:id="purchase_amount" layoutX="134.0" layoutY="323.0" prefHeight="25.0" prefWidth="137.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                           <Label layoutX="67.0" layoutY="363.0" text="Balance:">
                                              <font>
                                                 <Font name="Arial" size="16.0" />
